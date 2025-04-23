@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', monospace;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .header, .nav, .main, .section, 
+  .aside, .article, .footer {
+    background-color: #111;
+    border: 2px solid;
+    padding: 8px;
+    text-transform: lowercase;
+    font-weight: bold;
+  }
+  
+  /* Cores das bordas */
+  .header, .footer { border-color: #228B22; }  /* Verde escuro */
+  .nav { border-color: #FFD700; }              /* Ouro */
+  .main { border-color: #006400; }             /* Verde musgo */
+  .section { border-color: #FFD700; }          /* Ouro */
+  .aside { border-color: #FFD700; }            /* Ouro */
+  .article { border-color: #0000FF; }          /* Azul */
+  
+  /* Estilo header com nav */
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Grid principal para section e aside */
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  /* Section com artigos usando Flexbox */
+  .articles {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Aside com seções */
+  .aside {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Última section (abaixo do grid) */
+  .section-bottom {
+    margin-top: 8px;
+  }
+  
+  /* Espaçamento interno dos artigos */
+  .article, .aside .section {
+    padding-left: 16px;
+  }

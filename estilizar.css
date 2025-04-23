@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #000;
+    font-family: 'Courier New', monospace;
+    color: #FFF;
+    padding: 8px;
+  }
+  
+  .header, .nav, .main, .section, 
+  .aside, .article, .footer {
+    padding: 8px;
+    background-color: #111;
+    border: 2px solid;
+    text-align: left;
+    font-weight: 900;
+    text-transform: lowercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Bordas conforme a referência */
+  .header { border-color: #228B22; }  /* Verde escuro */
+  .nav { border-color: #FFD700; }     /* Amarelo ouro */
+  .main { border-color: #006400; }    /* Verde musgo */
+  .section { border-color: #FFD700; } /* Amarelo ouro */
+  .aside { border-color: #FFD700; }   /* Amarelo ouro */
+  .article { border-color: #0000FF; } /* Azul */
+  .footer { border-color: #228B22; }  /* Verde escuro */
+  
+  /* Layout */
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .content {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .section, .aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .article, .aside .section {
+    padding-left: 16px;
+  }
